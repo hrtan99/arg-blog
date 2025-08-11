@@ -1,0 +1,77 @@
+baseurl: "/"
+languageCode: "en-us"
+defaultContentLanguage: "en"
+# defaultContentLanguage: "zh"
+title: "Thomas's Blog"
+theme: "hugo-academic"
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+pagination:
+  pagerSize: 10
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug/"
+
+outputs:
+  home: [html, rss, json]
+
+# some menu items were added via the `menu` option in YAML in posts
+menu:
+  header:
+    - name: Search
+      url: "#"
+      identifier: menu-search
+    - name: Subscribe
+      url: "index.xml"
+  footer:
+    - name: Categories
+      url: "categories/"
+      weight: 2
+      pre: "optional"
+    - name: Tags
+      url: "tags/"
+      weight: 3
+      pre: "optional"
+    - name: Suggest an edit
+      url: "#"
+      weight: 4
+      identifier: "menu-edit"
+    - name: Back to top
+      url: "#"
+
+params:
+  homePosts: 6
+  mainSections: ["posts", "works"]
+  editLink: "https://github.com/yihui/hugo-prose/edit/master/exampleSite/content/"
+  authorDelimiter: " / "
+  stickyMenu: false
+  description: >
+    A website built through Hugo and blogdown with the hugo-prose theme.
+  footer: >
+    &copy; [Thomas](https://hr.tan.pub)2018 - 8102. All rights reserved.
+  license: >
+    Text and figures are licensed under [Creative Commons Attribution CC BY
+    4.0](https://creativecommons.org/licenses/by/4.0/). The source code is
+    licensed under MIT.
+  clustrmaps:
+    enabled: true          # 总开关
+    onlyHome: true         # 只在首页输出；要全站则设为 false
+    embed: "<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=a8a8a8&w=a&t=tt&d=niWoL3tqSHuvsPoHIEnR_kRSG-to-qwsCFJ_WrGxigM&co=ffffff&ct=808080&cmo=8c00ff&cmn=ff5353'></script>"
+    noscriptHref: 'https://clustrmaps.com/site/1bro2'
+
+markup:
+  highlight:
+    codeFences: true
+    lineNos: false           # 需要行号就 true / inline / table
+    noClasses: true          # 纯内联样式。若改成 false，必须引入 CSS（见下）
+    style: github            # 或 dracula, github, etc.
+
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+        title: true
+      wrapStandAloneImageWithinParagraph: false
