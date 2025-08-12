@@ -75,3 +75,13 @@ markup:
         block: true
         title: true
       wrapStandAloneImageWithinParagraph: false
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          inline:
+            - ["\\(", "\\)"]   # 行内 \(...\)
+            - ["$", "$"]       # 行内 $...$（如需）
+          block:
+            - ["\\[", "\\]"]   # 块级 \[...\]
+            - ["$$", "$$"]     # 块级 $$...$$（如需

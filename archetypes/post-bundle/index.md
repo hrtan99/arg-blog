@@ -43,6 +43,7 @@ authors: []
 comments: true
 lightgallery: false  # 若你有灯箱之类功能
 math: true           # 用 MathJax/KaTeX 时置 true
+tikz: false
 
 # 多语言（若你启用 i18n，可留空或按语言单独写）
 # translations:
