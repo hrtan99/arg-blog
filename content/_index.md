@@ -7,4 +7,4 @@ menu:
     weight: 1
 ---
 
-My blog is under reconstructing.
+My blog is under reconstruction.
