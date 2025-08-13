@@ -8,14 +8,14 @@
 # └─ cover.jpg  ← featuredImage 可填 "cover.jpg"
 
 # 基本
-title: "Notes on PL: Lambda Calculus Encodings"
+title: "Notes on PL 14: Lambda Calculus Encodings"
 subtitle: ""
 date: 2025-01-31T22:00:00
 lastmod: 2025-01-31T22:00:00
 draft: false
 
 # URL / SEO
-slug: "Notes-on-PL-Lambda-Calculus-Encodings"
+slug: "Notes-on-PL-14-Lambda-Calculus-Encodings"
 aliases: []
 description: ""
 # 若你用自定义永久链接，可在 config 里用 :slug

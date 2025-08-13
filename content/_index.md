@@ -7,4 +7,4 @@ menu:
     weight: 1
 ---
 
-My blog is under reconstruction.
+I recently bump my website generator from hexo to hugo. The content of my blog is under reconstruction.
