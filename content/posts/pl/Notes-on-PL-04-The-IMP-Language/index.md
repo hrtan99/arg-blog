@@ -61,7 +61,7 @@ $$
 \begin{aligned}
 \begin{array}{rcl}
 \texttt{Arithmetic Expressions} &a\in\mathbf{Aexp}& a::=x\mid n\mid a_{1}+a_{2}\mid a_{1}\times a_{2}\\
-\texttt{Boolean Expressions} &b\in\mathbf{Bexp}& b::=\mathbf{~true}\mid \mathbf{false}\mid a_{1}<a_{2}\\
+\texttt{Boolean Expressions} &b\in\mathbf{Bexp}& b::=\mathbf{~true}\mid \mathbf{false}\mid a_{1} < a_{2}\\
 \texttt{Commands} &c\in\mathbf{Com}& c::=\mathbf{~skip}\mid x:=a\mid c_{1};c_{2}\mid\mathbf{if~}b\mathbf{~then~}c_{1}\mathbf{~else~}c_{2}\mid\mathbf{while~}b\mathbf{~do~}c
 \end{array}
 \end{aligned}
