@@ -23,8 +23,8 @@ description: ""
 # posts = "/blog/:year/:slug/"
 
 # 分类
-categories: []
-tags: []
+categories: ["Computer Science"]
+tags: ["Programming Languages"]
 series: []
 
 # 文章选项
