@@ -15,7 +15,7 @@ lastmod: 2025-09-11T21:19:40+08:00
 draft: false
 
 # URL / SEO
-slug: "Pointer-Analysis"
+slug: "On-Program-Semantics"
 aliases: []
 description: ""
 # 若你用自定义永久链接，可在 config 里用 :slug
