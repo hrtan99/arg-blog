@@ -62,14 +62,14 @@ small step operational form, as a transition system: $(\Sigma, \tau, I)$, where 
 states, $I \subseteq \Sigma$ is the subset of initial states, and $\tau \subseteq \Sigma \times \Sigma$ is a transition relation.
 For sequential programs, the state set is defined as
 \[
-\Sigma \;\overset{\text{def}}{=}\; L \times M,
+\Sigma \;\overset{\text{def}}{=}\; \mathcal L \times \mathbb M,
 \]
 where each state $\sigma = (\ell, m)$ has a control part $\ell \in L$ denoting the current program point,
 and a memory part $m \in M \overset{\text{def}}{=} V \to \mathcal{V}$ mapping program variables $x \in V$ to
 values $v \in \mathcal{V}$. A transition models an atomic execution step, such as executing a
 machine-code instruction in a program. We denote by
 \[
-(\ell,m) \to (\ell',m')
+(\ell, m) \to (\ell',m')
 \]
 the fact that $((\ell,m), (\ell',m')) \in \tau$, i.e., the program can reach the state $(\ell',m')$ from the
 state $(\ell,m)$ after one execution step. The transition system derives mechanically
@@ -91,13 +91,13 @@ The transition system $\tau[\![P]\!]$ is derived by induction on the syntax of $
 \[
 \begin{array}{rcl}
 \tau[\![\,x := e\,]\!] & \overset{\text{def}}{=} & 
-\{ (\ell,m) \to (\ell', m[x \mapsto v]) \;\mid\; m \in M, \; e \Downarrow_m v \} \\[1ex]
+\{ (\ell,m) \to (\ell', m[x \mapsto v]) \;\mid\; m \in \mathbb M, \; e \Downarrow_m v \} \\[1ex]
 \tau[\![\,\mathbf{if}\; e \;\mathbf{then}\; P\,]\!] & \overset{\text{def}}{=} & 
-\{ (\ell,m) \to (\ell_P, m) \;\mid\; m \in M, \; e \Downarrow_m \text{true} \} \;\cup\; \tau[\![P]\!] \\
-&& \cup \;\{ (\ell,m) \to (\ell', m) \;\mid\; m \in M, \; e \Downarrow_m \text{false} \} \\[1ex]
+\{ (\ell,m) \to (\ell_P, m) \;\mid\; m \in \mathbb M, \; e \Downarrow_m \text{true} \} \;\cup\; \tau[\![P]\!] \\
+&& \cup \;\{ (\ell,m) \to (\ell', m) \;\mid\; m \in \mathbb M, \; e \Downarrow_m \text{false} \} \\[1ex]
 \tau[\![\,\mathbf{while}\; e \;\mathbf{do}\; P\,]\!] & \overset{\text{def}}{=} &
-\{ (\ell,m) \to (\ell_P, m) \;\mid\; m \in M, \; e \Downarrow_m \text{true} \} \;\cup\; \tau[\![P]\!] \\
-&& \cup \;\{ (\ell,m) \to (\ell', m) \;\mid\; m \in M, \; e \Downarrow_m \text{false} \} \\[1ex]
+\{ (\ell,m) \to (\ell_P, m) \;\mid\; m \in \mathbb M, \; e \Downarrow_m \text{true} \} \;\cup\; \tau[\![P]\!] \\
+&& \cup \;\{ (\ell,m) \to (\ell', m) \;\mid\; m \in \mathbb M, \; e \Downarrow_m \text{false} \} \\[1ex]
 \tau[\![\,P ; P'\,]\!] & \overset{\text{def}}{=} & \tau[\![P]\!] \;\cup\; \tau[\![P']\!]
 \end{array}
 \]
@@ -272,7 +272,7 @@ we will need further abstractions.
 There is a deep connection between the state semantics and the program logic
 of Floyd–Hoare used to prove partial correctness.
 If we interpret each logic assertion $A_\ell$ at program point $\ell$ as the set of memory states
-$[\![ A_\ell ]\!] \subseteq M$ satisfying it, and define
+$[\![ A_\ell ]\!] \subseteq \mathbb M$ satisfying it, and define
 \[
 M \;\overset{\text{def}}{=}\; \{\, (\ell,m) \mid m \in [\![ A_\ell ]\!] \,\},
 \]
@@ -312,11 +312,11 @@ zero) are caused by invalid arguments of operators, a natural idea is to observe
 only the set of values each variable can take at each program point.
 Instead of concrete state sets in
 \[
-\mathcal{P}(\Sigma) \;\overset{\text{def}}{=}\; \mathcal{P}(L \times (V \to \mathcal{V})),
+\mathcal{P}(\Sigma) \;\overset{\text{def}}{=}\; \mathcal{P}(L \times (\mathcal V \to \mathbb {V})),
 \]
 we manipulate abstract states in
 \[
-\Sigma^\sharp \;\overset{\text{def}}{=}\; (L \times V) \to \mathcal{P}(\mathcal{V}).
+\Sigma^\sharp \;\overset{\text{def}}{=}\; (L \times \mathcal V) \to \mathcal{P}(\mathbb{V}).
 \]
 The concrete and abstract domains are linked through
 the following Galois connection (so-called Cartesian Galois connection):
@@ -348,8 +348,8 @@ and intervals $(\mathbb{R} \to \{-\infty\}) \times (\mathbb{R} \to \{+\infty\})$
 yielding the **interval abstract domain**.
 
 Another example of memory domain is the **linear inequality domain**
-that abstracts sets of points in $\mathcal{P}(V \to \mathbb{R})$ into convex, closed polyhedra.
-One abstracts $\mathcal{P}(\Sigma) \simeq L \to \mathcal{P}(V \to \mathbb{R})$
+that abstracts sets of points in $\mathcal{P}(\mathcal V \to \mathbb{R})$ into convex, closed polyhedra.
+One abstracts $\mathcal{P}(\Sigma) \simeq \mathcal L \to \mathcal{P}( \mathcal V \to \mathbb{R})$
 by associating a polyhedron to each program point,
 which permits the inference of linear relations between variables.
 The polyhedra domain is thus a **relational domain**,
