@@ -83,12 +83,12 @@ $$
 $$
 **Boolean Expressions**
 $$
-\frac{\langle\sigma,a_1\rangle\to\langle\sigma,a_1^{\prime}\rangle}{\langle\sigma,a_1<a_2\rangle\to\langle\sigma,a_1^{\prime}<a_2\rangle}
+\frac{\langle\sigma,a_1\rangle\to\langle\sigma,a_1^{\prime}\rangle}{\langle\sigma,a_1 < a_2\rangle\to\langle\sigma,a_1^{\prime} < a_2\rangle}
 \quad
-\frac{\langle\sigma,a_2\rangle\to\langle\sigma,a_2^{\prime}\rangle}{\langle\sigma,n<a_2\rangle\to\langle\sigma,n<a_2^{\prime}\rangle}\\[2ex]
-\frac{n<m}{\langle\sigma,n<m\rangle\to\langle\sigma,\mathbf{true}\rangle}
+\frac{\langle\sigma,a_2\rangle\to\langle\sigma,a_2^{\prime}\rangle}{\langle\sigma,n < a_2\rangle\to\langle\sigma,n < a_2^{\prime}\rangle}\\[2ex]
+\frac{n < m}{\langle\sigma,n < m\rangle\to\langle\sigma,\mathbf{true}\rangle}
 \quad
-\frac{n\geq m}{\langle\sigma,n<m\rangle\to\langle\sigma,\mathbf{false}\rangle}
+\frac{n\geq m}{\langle\sigma,n < m\rangle\to\langle\sigma,\mathbf{false}\rangle}
 $$
 **Commands**
 $$
