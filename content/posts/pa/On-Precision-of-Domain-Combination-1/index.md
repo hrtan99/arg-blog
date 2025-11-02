@@ -563,7 +563,7 @@ To carry out the analysis of a basic imperative language, we define the followin
 We require a sound over-approximation for basic program steps.
 - The **concrete** post-condition:
   \[
-    post : \mathcal{P}(\mathbb{S}) \to \mathcal{P}(\mathbb{S})
+    post : \wp(\mathbb{S}) \to \wp(\mathbb{S})
   \]
   where $\mathbb{S}$ is the set of concrete states.
 - The **abstract** post-condition:
