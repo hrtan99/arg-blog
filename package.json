@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "hugo minify",
+    "build": "hugo --minify",
     "postbuild": "node themes/hugo-academic/tools/render-tikz.mjs public",
     "dev": "hugo server -D"
   },
