@@ -1,3 +1,7 @@
 public/*
 .hugo_build.lock
 themes/*
+node_modules/*
+.DS_Store
+.vscode/*
+package-lock.json
