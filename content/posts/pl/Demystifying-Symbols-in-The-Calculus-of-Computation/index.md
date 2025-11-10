@@ -12,7 +12,7 @@ title: "Demystifying Symbols in The Calculus of Computation"
 subtitle: ""
 date: 2024-08-10T12:07:11+08:00
 lastmod: 2024-11-11T11:27:11+08:00
-draft: true
+draft: false
 
 # URL / SEO
 slug: "Demystifying-Symbols-in-The-Calculus-of-Computation"
