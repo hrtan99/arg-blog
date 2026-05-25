@@ -49,6 +49,20 @@ not use any CSS frameworks, and the full CSS code is also written from scratch
 
 This page introduces the features of this Hugo theme that you can fiddle with.
 
+## Pseudocode
+
+```pseudo {title="Pseudocode SSR Test" lineNumber=true}
+\begin{algorithmic}
+\REQUIRE A sequence $a_1,\ldots,a_n$
+\ENSURE Prefix sums $s$
+\STATE $s_0 \gets 0$
+\FOR{$i \gets 1$ \TO $n$}
+  \STATE $s_i \gets s_{i-1} + a_i$
+\ENDFOR
+\RETURN $s$
+\end{algorithmic}
+```
+
 ## Site configurations
 
 Below are the possible options that you may configure for a site based on this

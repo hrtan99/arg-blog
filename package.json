@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "hugo --minify",
-    "postbuild": "node themes/hugo-academic/tools/render-tikz.mjs public",
+    "postbuild": "node themes/hugo-academic/tools/render-tikz.mjs public && node themes/hugo-academic/tools/render-pseudocode.mjs public",
     "dev": "hugo server -D"
   },
   "repository": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "cheerio": "^1.1.2",
-    "node-tikzjax": "^1.0.3"
+    "node-tikzjax": "^1.0.3",
+    "pseudocode": "2.4.1"
   }
 }
