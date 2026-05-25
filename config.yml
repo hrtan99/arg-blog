@@ -41,6 +41,8 @@ menu:
       url: "#"
 
 params:
+  assetVersion: "20260525-16"
+  themeStyle: "warm"  # classic | warm
   homePosts: 6
   mainSections: ["posts", "works"]
   editLink: "https://github.com/yihui/hugo-prose/edit/master/exampleSite/content/"
@@ -58,7 +60,7 @@ params:
   clustrmaps:
     enabled: true          # 总开关
     onlyHome: true         # 只在首页输出；要全站则设为 false
-    embed: "<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=a8a8a8&w=a&t=tt&d=niWoL3tqSHuvsPoHIEnR_kRSG-to-qwsCFJ_WrGxigM&co=ffffff&ct=808080&cmo=8c00ff&cmn=ff5353'></script>"
+    embed: "<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=a8a8a8&w=a&t=tt&d=niWoL3tqSHuvsPoHIEnR_kRSG-to-qwsCFJ_WrGxigM&co=f3eee4&ct=808080&cmo=8c00ff&cmn=ff5353'></script>"
     noscriptHref: 'https://clustrmaps.com/site/1bro2'
 
 markup:
