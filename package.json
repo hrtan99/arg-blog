@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "hugo --minify",
-    "postbuild": "node themes/hugo-academic/tools/render-tikz.mjs public && node themes/hugo-academic/tools/render-pseudocode.mjs public",
+    "build": "hugo --minify --cleanDestinationDir",
+    "postbuild": "node themes/hugo-academic/tools/render-tikz.mjs public && node themes/hugo-academic/tools/render-pseudocode.mjs public && node themes/hugo-academic/tools/render-mathjax.mjs public",
     "dev": "hugo server -D"
   },
   "repository": {
@@ -24,7 +24,10 @@
     "glob": "^11.0.3"
   },
   "dependencies": {
+    "@mathjax/mathjax-stix2-font": "4.1.2",
+    "@mathjax/src": "4.1.2",
     "cheerio": "^1.1.2",
+    "linkedom": "0.18.12",
     "node-tikzjax": "^1.0.3",
     "pseudocode": "2.4.1"
   }
