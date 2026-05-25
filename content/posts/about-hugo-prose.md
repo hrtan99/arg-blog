@@ -51,16 +51,31 @@ This page introduces the features of this Hugo theme that you can fiddle with.
 
 ## Pseudocode
 
-```pseudo {title="Pseudocode SSR Test" lineNumber=true}
+```pseudo {title="Quicksort" lineNumber=true}
+\begin{algorithm}
+\caption{Quicksort}
 \begin{algorithmic}
-\REQUIRE A sequence $a_1,\ldots,a_n$
-\ENSURE Prefix sums $s$
-\STATE $s_0 \gets 0$
-\FOR{$i \gets 1$ \TO $n$}
-  \STATE $s_i \gets s_{i-1} + a_i$
-\ENDFOR
-\RETURN $s$
+\PROCEDURE{Quicksort}{$A, p, r$}
+    \IF{$p < r$}
+        \STATE $q = $ \CALL{Partition}{$A, p, r$}
+        \STATE \CALL{Quicksort}{$A, p, q - 1$}
+        \STATE \CALL{Quicksort}{$A, q + 1, r$}
+    \ENDIF
+\ENDPROCEDURE
+\PROCEDURE{Partition}{$A, p, r$}
+    \STATE $x = A[r]$
+    \STATE $i = p - 1$
+    \FOR{$j = p$ \TO $r - 1$}
+        \IF{$A[j] < x$}
+            \STATE $i = i + 1$
+            \STATE exchange
+            $A[i]$ with     $A[j]$
+        \ENDIF
+        \STATE exchange $A[i]$ with $A[r]$
+    \ENDFOR
+\ENDPROCEDURE
 \end{algorithmic}
+\end{algorithm}
 ```
 
 ## Site configurations
