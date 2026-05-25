@@ -78,11 +78,11 @@ We can now define denotations for IMP. We start with the denotations of expressi
 $$
 \begin{aligned}
 \mathcal{A}[\![n]\!]=&\,\{(\sigma,n)\}\\
-\mathcal{A}[\![x]=&\,\{(\sigma,\sigma(x))\}\\
+\mathcal{A}[\![x]\!]=&\,\{(\sigma,\sigma(x))\}\\
 \mathcal{A}[\![a_1+a_2]\!]=&\,\{(\sigma,n)\mid(\sigma,n_1)\in\mathcal{A}[\![a_1]\!]\wedge(\sigma,n_2)\in\mathcal{A}[\![a_2]\!]\wedge n=n_1+n_2\}\\\\
-\mathcal B[\![true]\!]=&\,\{(\sigma,\mathbf{true})\}\\
-B[\![false]\!]=&\,\{(\sigma,\mathbf{false})\}\\
-\mathcal{B}[\![a_1<a_2]\!]=&\,\{(\sigma,\mathbf{true})\mid(\sigma,n_1)\in\mathcal{A}[\![a_1]\!]\wedge(\sigma,n_2)\in\mathcal{A}[\![a_2]\!]\wedge n_1<n_2\}\cup\\
+\mathcal{B}[\![true]\!]=&\,\{(\sigma,\mathbf{true})\}\\
+\mathcal{B}[\![false]\!]=&\,\{(\sigma,\mathbf{false})\}\\
+\mathcal{B}[\![a_1 < a_2]\!]=&\,\{(\sigma,\mathbf{true})\mid(\sigma,n_1)\in\mathcal{A}[\![a_1]\!]\wedge(\sigma,n_2)\in\mathcal{A}[\![a_2]\!]\wedge n_1 < n_2\}\cup\\
 &\,\{(\sigma,\mathbf{false})\mid(\sigma,n_1)\in\mathcal{A}[\![a_1]\!]\wedge(\sigma,n_2)\in\mathcal{A}[\![a_2]\!]\wedge n_1\geq n_2\}
 \end{aligned}
 $$
@@ -97,7 +97,7 @@ $$
 Note that $\mathcal C[\![c_1;c_2]\!]=\mathcal{C}[\![c_2]\!]\circ\mathcal{C}[\![c_1]\!]$, where $\circ$ is the composition of relations, defined as follows: if $R_1\subseteq A \times B$ and $R_2\subseteq B \times C$ then $R_2 \circ R_1\subsetneq A \times C$ is $R_2 \circ R_1$ $=$ $\{(a,c)\mid\exists b\in B.$ $(a,b)\in R_1\land(b,c)\in R_2\}$. If $\mathcal C[\![c_1]\!]$ and $\mathcal C[\![c_2]\!]$ are total functions, then $\circ$ is function composition.
 $$
 \small\begin{aligned}
-\mathcal C[\![\mathbf{if~}b~\mathbf{then~}c_1~\mathbf{else~} c_2]\!]=&\,\{(\sigma,\sigma^{\prime})\mid(\sigma,\mathbf{true})\in B[\![b]\!]\wedge(\sigma,\sigma^{\prime})\in \mathcal C[\![c_1]\!]\}\cup\\
+\mathcal C[\![\mathbf{if~}b~\mathbf{then~}c_1~\mathbf{else~} c_2]\!]=&\,\{(\sigma,\sigma^{\prime})\mid(\sigma,\mathbf{true})\in\mathcal{B}[\![b]\!]\wedge(\sigma,\sigma^{\prime})\in \mathcal C[\![c_1]\!]\}\cup\\
 &\,\{(\sigma,\sigma^{\prime})\mid(\sigma,\mathbf{false})\in\mathcal{B}[\![b]\!]\wedge(\sigma,\sigma^{\prime})\in\mathcal{C}[\![c_2]\!]\}\\
 \mathcal C[\![\mathbf{while~}b~\mathbf{do~}c]\!]=&\,\{(\sigma,\sigma)\mid(\sigma,\mathbf{false})\in\mathcal{B}[\![b]\!]\}\cup\\
 &\,\{(\sigma,\sigma^{\prime})\mid(\sigma,\mathbf{true})\in\mathcal{B}[\![b]\!]\wedge\exists\sigma^{\prime\prime}.((\sigma,\sigma^{\prime\prime})\in\mathcal{C}[\![c]\!]\wedge(\sigma^{\prime\prime},\sigma^{\prime})\in\mathcal{C}[\![\mathbf{while~}b~\mathbf{do~}c]\!])\}
@@ -161,8 +161,6 @@ $$
 &\,\{(\sigma,\sigma^{\prime})\mid(\sigma,\mathbf{true})\in\mathcal{B}[\![b]\!]\wedge\exists\sigma^{\prime\prime}.(\sigma,\sigma^{\prime\prime})\in\mathcal{C}[\![c]\!]\wedge(\sigma^{\prime\prime},\sigma^{\prime})\in f\}
 \end{aligned}
 $$
-
-
 
 
 
