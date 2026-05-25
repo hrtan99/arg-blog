@@ -74,7 +74,7 @@ $$
 $$
 always diverges while
 $$
-\mathbf{while~}0<\text{i} \mathbf{~do~} \text{i}:=\mathrm{i}+1
+\mathbf{while~}0 < \text{i} \mathbf{~do~} \text{i}:=\mathrm{i}+1
 $$
 diverges if and only if the value of variable $i$ in the initial state is positive.
 

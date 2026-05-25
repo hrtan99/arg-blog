@@ -118,28 +118,28 @@ $$
 $$
 We can now take a concrete program and see how it executes under the above rules. Consider we execute the program
 $$
-\mathrm{foo}:=3;\mathbf{while}~\mathrm{foo}<4\mathbf{~do~}\mathrm{foo}:=\mathrm{foo}+5
+\mathrm{foo}:=3;\mathbf{while}~\mathrm{foo} < 4\mathbf{~do~}\mathrm{foo}:=\mathrm{foo}+5
 $$
 The execution works as follows:
 $$
 \begin{aligned}
-&\langle\sigma,\mathrm{foo}:=3;\mathbf{while}\mathrm{~foo}<4\mathbf{~do}\mathrm{~foo}:=\mathrm{foo}+5\rangle\\
-&\rightarrow\langle\sigma^{\prime},\mathbf{skip};\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle&\mathrm{where~}\sigma^{\prime}=\sigma[\mathrm{foo}\mapsto3]\\
-&\rightarrow\langle\sigma^{\prime},\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
-&\to\langle\sigma^{\prime},\mathbf{if}\mathrm{~3<4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
+&\langle\sigma,\mathrm{foo}:=3;\mathbf{while}\mathrm{~foo} < 4\mathbf{~do}\mathrm{~foo}:=\mathrm{foo}+5\rangle\\
+&\rightarrow\langle\sigma^{\prime},\mathbf{skip};\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle&\mathrm{where~}\sigma^{\prime}=\sigma[\mathrm{foo}\mapsto3]\\
+&\rightarrow\langle\sigma^{\prime},\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
+&\to\langle\sigma^{\prime},\mathbf{if}\mathrm{~3 < 4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
 &\to\langle\sigma^{\prime},\mathbf{if~true~then}\mathrm{ (foo}:=\mathrm{foo}+5;W)\mathbf{~else~skip}\rangle\\
-&\to\langle\sigma^{\prime},\mathrm{foo}:=\mathrm{foo}+5;\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
-&\to\langle\sigma^{\prime},\mathrm{foo}:=3+5;\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
-&\to\langle\sigma^{\prime},\mathrm{foo}:=8;\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
-&\to\langleσ^{\prime\prime},\mathbf{skip};\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle&\mathrm{where~}\sigma^{\prime\prime}=\sigma^{\prime}[\mathrm{foo}\mapsto8]\\
-&\to\langle\sigma^{\prime\prime},\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
-&\to\langle\sigma^{\prime\prime},\mathbf{if}\mathrm{~foo<4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
-&\to\langle\sigma^{\prime\prime},\mathbf{if}\mathrm{~8<4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
+&\to\langle\sigma^{\prime},\mathrm{foo}:=\mathrm{foo}+5;\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
+&\to\langle\sigma^{\prime},\mathrm{foo}:=3+5;\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
+&\to\langle\sigma^{\prime},\mathrm{foo}:=8;\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
+&\to\langleσ^{\prime\prime},\mathbf{skip};\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle&\mathrm{where~}\sigma^{\prime\prime}=\sigma^{\prime}[\mathrm{foo}\mapsto8]\\
+&\to\langle\sigma^{\prime\prime},\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle\\
+&\to\langle\sigma^{\prime\prime},\mathbf{if}\mathrm{~foo < 4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
+&\to\langle\sigma^{\prime\prime},\mathbf{if}\mathrm{~8 < 4~}\mathbf{then~}\mathrm{(foo:=foo+5;W)}\mathbf{~else~skip}\rangle\\
 &\to\langle\sigma^{\prime\prime},\mathbf{if~false~then~}\mathrm{ (foo}:=\mathrm{foo}+5;W)\mathbf{~else~skip}\rangle\\
 &\to\langle\sigma^{\prime\prime},\mathbf{skip}\rangle
 \end{aligned}
 $$
-where $W$ is an abbreviation for the while loop $\mathbf{while}\mathrm{~foo<4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle$.
+where $W$ is an abbreviation for the while loop $\mathbf{while}\mathrm{~foo < 4\mathbf{~do}\mathrm{~foo}}:=\mathrm{foo}+5\rangle$.
 
 ### Large-step Operational Semantics for IMP
 
@@ -276,6 +276,5 @@ $$
 \end{prooftree}
 $$
 Hence, we showed that in each of the two possible cases, the command $\mathbf{if}$ $b$ $\mathbf{then}$ $(c;W)$ $\mathbf{else~skip}$ evaluates to the same final state as the command $W$.
-
 
 

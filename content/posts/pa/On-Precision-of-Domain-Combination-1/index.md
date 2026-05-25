@@ -357,7 +357,7 @@ That is, abstract joins correspond exactly to concrete unions.
 
 **Examples.**
 - The flat lattice of constants extended with $\top$ and $\bot$, i.e. $(\mathbb{Z}_0, \sqsubseteq)$, is distributive.
-- The lattice $\{ \bot, [<0], [=0], [>0], [\leq 0], [\geq 0], [\neq 0], \top \}$ of signs is distributive.
+- The lattice $\{ \bot, [ < 0], [=0], [>0], [\leq 0], [\geq 0], [\neq 0], \top \}$ of signs is distributive.
 - The lattice of intervals is not distributive. For example, there is no single abstract interval whose concretization equals the union of $\gamma([0,10])$ and $\gamma([12,20])$.
 
 
@@ -407,7 +407,7 @@ Consider the sign domain with elements \(\{[\!-\!], [0], [\!+\!], [\!-\!0], [0\!
 \end{tikzpicture}
 ```
 
-representing respectively $\{x<0\}$, $\{x=0\}$, $\{x>0\}$, $\{x\le 0\}$, $\{x\ge 0\}$, and $\mathbb{Z}$.
+representing respectively $\{x < 0\}$, $\{x=0\}$, $\{x>0\}$, $\{x\le 0\}$, $\{x\ge 0\}$, and $\mathbb{Z}$.
 
 The disjunctive completion $\mathbb D^\sharp_{\mathrm{disj}}$ adds new abstract elements corresponding to all unions of disjoint sign classes. For example:
 \[
@@ -643,4 +643,3 @@ While theoretically elegant, disjunctive completion suffers from severe practica
 
 A common mitigation technique is *$k$-limiting*, which bounds the number of disjuncts allowed in any element.  
 When merging disjunctions beyond this limit, the join operator must heuristically decide which disjuncts to retain or merge.
-
