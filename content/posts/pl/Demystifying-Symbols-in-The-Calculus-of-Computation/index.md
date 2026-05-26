@@ -23,8 +23,8 @@ description: ""
 # posts = "/blog/:year/:slug/"
 
 # 分类
-categories: []
-tags: []
+categories: ["Computer Science"]
+tags: ["Programming Languages"]
 series: []
 
 # 文章选项
@@ -105,5 +105,4 @@ For instance, in an operational semantics of an imperative language we might wri
 \langle s,\,c\rangle \;\leadsto\; \langle s',\,c'\rangle
 \]
 meaning “starting in state $s$ executing command $c$ leads to state $s'$ and command $c'$”.
-
 

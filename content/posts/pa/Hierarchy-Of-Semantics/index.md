@@ -23,8 +23,8 @@ description: ""
 # posts = "/blog/:year/:slug/"
 
 # 分类
-categories: []
-tags: []
+categories: ["Computer Science"]
+tags: ["Programming Languages"]
 series: []
 
 # 文章选项
@@ -162,4 +162,3 @@ For instance:
 We have surveyed a hierarchy of semantics starting from maximal trace semantics down to reachable semantics. 
 Through abstract interpretation, each semantics can be formally derived from a more concrete one, ensuring correctness-preserving abstraction. 
 This unified view highlights how different semantics are suited for verifying different classes of program properties [oai_citation:10‡Constructive Design of a Hierarchy of Semantics of a Transition System by Abstract Interpretation.pdf](file-service://file-N8TYcGD5rqy8tqm8B1mLUe).
-
