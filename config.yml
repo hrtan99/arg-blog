@@ -41,7 +41,7 @@ menu:
       url: "#"
 
 params:
-  assetVersion: "20260526-2"
+  assetVersion: "20260526-3"
   themeStyle: "warm"  # classic | warm
   homePosts: 6
   mainSections: ["posts", "works"]
